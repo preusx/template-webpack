@@ -1,0 +1,22 @@
+-
+  var brackets = {
+    exp: ['<[', ']>'],
+  };
+
+  var args = function(a) {
+    return Array.prototype.slice.call(a);
+  };
+
+  var exp = function() {
+    return [
+      brackets.exp[0],
+      args(arguments).join(' '),
+      brackets.exp[1],
+      ].join(' ');
+  };
+
+
+mixin v-exp
+  != '<['
+  block
+  != ']>'

@@ -1,0 +1,15 @@
+//- include ./bemto/lib/helpers.jade
+//- include ./bemto/lib/tag_metadata.jade
+//- include ./bemto/lib/settings.jade
+//- include ./bemto/lib/bemto_custom_tag.jade
+//- include ./bemto/lib/bemto_tag.jade
+//- include ./bemto/lib/bemto.jade
+include bemto/bemto.pug
+
+mixin b-context(blockname)
+  if block
+    - bemto_chain.push([blockname])
+    - bemto_chain_contexts.push('block')
+    block
+
+include ./jinja

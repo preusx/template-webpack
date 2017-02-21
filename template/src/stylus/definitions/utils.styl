@@ -1,0 +1,10 @@
+triangle(size, orientation='bottom', color=#000)
+  br size solid transparent
+  h 0
+  w 0
+
+  $reversed = opposite-position(orientation)
+
+  border-{$reversed}-color color
+  border-{orientation} 0 solid transparent
+
